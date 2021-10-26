@@ -1,0 +1,28 @@
+var LimiteTope, LimiteBajo, LimiteIzquierda, LimiteDerecha, SumoX, SumoY, x, y;
+
+
+LimiteTope = 0;
+LimiteBajo = 25;
+LimiteIzquierda = 0;
+LimiteDerecha = 25;
+SumoX = 1;
+SumoY = -1;
+x = 12;
+y = 25;
+while (true) {
+  x = x + SumoX;
+  y = y + SumoY;
+  if (x < LimiteIzquierda) {
+    SumoX = 1;
+  }
+  if (x > LimiteDerecha) {
+    SumoX = -1;
+  }
+  if (y < LimiteTope) {
+    SumoY = 1;
+  }
+  if (y > LimiteBajo) {
+    SumoY = -1;
+  }
+  window.alert(['La Bola está en X = ',x,' y en la posición Y = ',y].join(''));
+}
